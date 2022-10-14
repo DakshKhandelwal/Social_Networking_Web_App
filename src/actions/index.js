@@ -14,7 +14,7 @@ export const setLoading = (status) => ({
 
 export const getArticles = (payload) => ({
     type: GET_ARTICLES,
-    payload: payload,
+    payload: payload
 });
 
 export function signInAPI() {
@@ -49,9 +49,10 @@ export function signOutAPI() {
 export function postArticleAPI(payload) {
     return(dispatch) => {
         dispatch(setLoading(true));
-
+        console.log("inside postArticleAPI ", payload)
         if(payload.image != "") {
-            const upload = storage.ref('images/${payload.image.name}').put(payload.image);
+            console.log("in imagr postArticleAPI ", payload.image)
+            const upload = storage.ref(`images/${payload.image.name}`).put(payload.image);
             upload.on(
                 "state_changed", 
                 (snapshot) => {
@@ -61,7 +62,7 @@ export function postArticleAPI(payload) {
                         console.log(`Progress: ${progress}%`);
                     }
                 }, 
-                (error) => console.log(error.code),
+                (error) => console.log(error.code, error),
                 async () => {
                     const downloadURL = await upload.snapshot.ref.getDownloadURL();
                     db.collection("articles").add({
@@ -95,6 +96,21 @@ export function postArticleAPI(payload) {
             });
             dispatch(setLoading(false));
         }
+        else{
+            db.collection("articles").add({
+                actor: {
+                    description: payload.user.email,
+                    title: payload.user.displayName,
+                    date: payload.timestamp,
+                    image: payload.user.photoURL,
+                },
+                video: payload.video,
+                sharedImg: "",
+                comments: 0,
+                description: payload.description,
+            }); 
+            dispatch(setLoading(false));
+        }
     };
 }
 
@@ -105,7 +121,11 @@ export function getArticlesAPI() {
         db.collection("articles")
           .orderBy("actor.date", "desc")
           .onSnapshot((snapshot) => {
-            payload = snapshot.docs.map((doc) => doc.data());
+            payload = snapshot.docs.map((doc) => {
+                const data=doc.data();
+                const id =doc.id;
+                return {id,...data}
+            });
             console.log(payload);
             dispatch(getArticles(payload));
           });

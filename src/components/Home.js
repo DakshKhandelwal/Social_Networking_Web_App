@@ -12,11 +12,10 @@ const Home = (props) => {
             <Content>
                 <Section>
                     <h5>
-                    <a> Hiring in a hurry? -</a>
+                    <a> Meet new Developers </a>
                     </h5>
                         
-                    <p> Find talented pros in record time
-                        with Upwork and keep business moving.
+                    <p> Find talented developers and make new friends
                     </p>
                     
                 </Section>
@@ -49,13 +48,14 @@ const Section = styled.section`
     display: flex;
     justify-content: center;
     h5 {
-        color: #0a66c2;
+        color: #8a39bd;
         font-size: 14px;
         a {
             font-weight: 700;
         }
     }
     p {
+        margin-left: 5px;
         font-size: 14px;
         color: #434649;
         font-weight: 600;

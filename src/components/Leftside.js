@@ -6,14 +6,17 @@ const Leftside = (props) => {
         <Container> 
             <ArtCard>
                 <UserInfo>
-                    <CardBackground />
                     <a>
-                        <Photo/>
+                        <div>
+                        {props.user && props.user.photoURL ? (
+                            <img src={props.user.photoURL} />
+                        ) : (
+                            <img src="/images/user.svg" alt="" />
+                        )}
+                        </div>
                         <Link> Welcome, {props.user ? props.user.displayName : "there"}! </Link>
                     </a>
-                    <a>
-                        <AddPhotoText> Add a photo</AddPhotoText>
-                    </a>
+                    
                 </UserInfo>
                 <Widget>
                     <a>

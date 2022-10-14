@@ -15,7 +15,7 @@ const PostModal = (props) => {
         const image = e.target.files[0];
 
         if(image === "" || image === undefined) {
-            alert('Not an image, the file is a ${typeof image}');
+            alert(`Not an image, the file is a ${typeof image}`);
             return;
         }
         setShareImage(image);
@@ -40,7 +40,7 @@ const PostModal = (props) => {
             description: editorText,
             timestamp: firebase.firestore.Timestamp.now(),
         };
-
+        console.log(payload);
         props.postArticle(payload);
         reset(e);
     };
@@ -67,9 +67,9 @@ const PostModal = (props) => {
                         <SharedContent>
                             <UserInfo>
                                 {
-                                    props.user.photoURL ? (<img src={props.user.photoURL} />)
+                                    props.user.photoURL ? (<img src={props.user.photoURL} alt=""/>)
                                     : 
-                                    (<img src="/images/user.svg" alt="" />)
+                                    (<img src="/images/user.svg" alt=""/>)
                                 }
                                 <span> { props.user.displayName }</span>
                             </UserInfo>
@@ -93,7 +93,7 @@ const PostModal = (props) => {
                                             <p>
                                                 <label htmlFor="file"> Select an image to share </label>
                                             </p>
-                                            {shareImage && <img src={URL.createObjectURL(shareImage)}/>}                                  
+                                            {shareImage && <img src={URL.createObjectURL(shareImage)} alt=""/>}                                  
                                         </UploadImage>
 
                                     ) : (

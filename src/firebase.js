@@ -4,14 +4,24 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import 'firebase/compat/storage';
 
+// const firebaseConfig = {
+//     apiKey: "AIzaSyC9HYQugC9kLtLppP8zSzs1Prr8pYynMss",
+//     authDomain: "linkedin-clone-df47d.firebaseapp.com",
+//     projectId: "linkedin-clone-df47d",
+//     storageBucket: "linkedin-clone-df47d.appspot.com",
+//     messagingSenderId: "713236133265",
+//     appId: "1:713236133265:web:674be2be268b36bc391630"
+//   };
+
 const firebaseConfig = {
-    apiKey: "AIzaSyC9HYQugC9kLtLppP8zSzs1Prr8pYynMss",
-    authDomain: "linkedin-clone-df47d.firebaseapp.com",
-    projectId: "linkedin-clone-df47d",
-    storageBucket: "linkedin-clone-df47d.appspot.com",
-    messagingSenderId: "713236133265",
-    appId: "1:713236133265:web:674be2be268b36bc391630"
-  };
+  apiKey: "AIzaSyD2-2h6IJhJAIhKSm8SqXyjSLZ_iFcBnSc",
+  authDomain: "developer-connector-dff28.firebaseapp.com",
+  projectId: "developer-connector-dff28",
+  storageBucket: "developer-connector-dff28.appspot.com",
+  messagingSenderId: "529065222982",
+  appId: "1:529065222982:web:54bb9e2d833b00ffe93b47",
+  measurementId: "G-H30ZPLDCV0"
+};
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();

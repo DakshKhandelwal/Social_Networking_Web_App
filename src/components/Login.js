@@ -9,7 +9,7 @@ const Login = (props) => {
             { props.user && <Navigate to='/home' />}
             <Nav>
                 <a href="/">
-                    <img src="/images/login-logo.svg" alt="" />
+                    <img src="/images/DC_mid_logo.png" alt=""/>
                 </a>
                 <div>
                     <Join> Join now</Join>
@@ -18,7 +18,7 @@ const Login = (props) => {
             </Nav>
             <Section> 
                 <Hero>
-                    <h1> Welcome to your professional community</h1>
+                    <h1> Welcome to your Developer Community</h1>
                     <img src ="/images/login-hero.svg" alt="" />
                 </Hero>
 
@@ -115,7 +115,7 @@ const Hero = styled.div`
         padding-bottom: 0;
         width: 55%;
         font-size: 56px;
-        color: #2977c9;
+        color: #54bbd3;
         font-weight: 200;
         line-height: 70px;
         @media (max-width: 768px) {

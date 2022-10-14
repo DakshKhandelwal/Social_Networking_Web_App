@@ -8,7 +8,7 @@ const Header = (props) => {
             <Content>
                 <Logo>
                     <a href ="/home">
-                        <img src="/images/home-logo.svg" alt="" />
+                        <img src="/images/DC_logo.png" alt="" />
                     </a>
                 </Logo>
                 <Search>
@@ -33,13 +33,6 @@ const Header = (props) => {
                             <a>
                                 <img src="/images/nav-network.svg" alt="" />
                                 <span>  My Network</span>
-                            </a>
-                        </NavList>
-
-                        <NavList>
-                            <a>
-                                <img src="/images/nav-jobs.svg" alt="" />
-                                <span> Jobs</span>
                             </a>
                         </NavList>
 

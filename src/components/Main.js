@@ -12,6 +12,10 @@ const Main = (props) => {
         props.getArticles();
     }, []);
 
+    const handleLike = (e) => {
+        e.preventDefault();
+
+    }
     const handleClick = (e) => {
         e.preventDefault();
         if(e.target !== e.currentTarget) {
@@ -56,7 +60,7 @@ const Main = (props) => {
                         </button>
 
                         <button>
-                            <img src="/images/event-icon.svg" alt="" />
+                            <img src="/images/event-icon.png" alt="" />
                             <span> Event</span>
                         </button>
 
@@ -117,7 +121,9 @@ const Main = (props) => {
                         </SocialCounts>
                         <SocialActions>
                             <button>
-                                <img src="/images/like-icon.svg" alt="" />
+                                <button onClick ={handleLike} >
+                                    <img src="/images/like-icon.svg" alt="" />
+                                </button>
                                 <span>Like</span>
                             </button>
                             <button>

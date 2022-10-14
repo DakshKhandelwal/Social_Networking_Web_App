@@ -17,7 +17,7 @@ const Rightside = (props) => {
                             <Avatar />
                         </a>
                         <div>
-                            <span>#Linkedin</span>
+                            <span>#DevConnectors</span>
                             <button> Follow</button>
                         </div>
                     </li>
@@ -27,7 +27,7 @@ const Rightside = (props) => {
                             <Avatar />
                         </a>
                         <div>
-                            <span>#Video</span>
+                            <span>#DC</span>
                             <button> Follow</button>
                         </div>
                     </li>
@@ -41,7 +41,7 @@ const Rightside = (props) => {
             </FollowCard>
             
             <BannerCard>
-                <img src="/images/jobs-ad.jpg" alt="" />
+                <img src="/images/DC_main_page.png" alt="" />
             </BannerCard>
             
         </Container>
