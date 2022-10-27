@@ -4,15 +4,6 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import 'firebase/compat/storage';
 
-// const firebaseConfig = {
-//     apiKey: "AIzaSyC9HYQugC9kLtLppP8zSzs1Prr8pYynMss",
-//     authDomain: "linkedin-clone-df47d.firebaseapp.com",
-//     projectId: "linkedin-clone-df47d",
-//     storageBucket: "linkedin-clone-df47d.appspot.com",
-//     messagingSenderId: "713236133265",
-//     appId: "1:713236133265:web:674be2be268b36bc391630"
-//   };
-
 const firebaseConfig = {
   apiKey: "AIzaSyD2-2h6IJhJAIhKSm8SqXyjSLZ_iFcBnSc",
   authDomain: "developer-connector-dff28.firebaseapp.com",
